@@ -114,3 +114,43 @@ body{margin:0;font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "
 .nav-toggle{display:inline-block}
 .container{padding:1rem}
 }
+/* Default hide on mobile */
+.nav-links {
+  display: flex;
+  gap: 1rem;
+  list-style: none;
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background: #fff;
+    position: absolute;
+    top: 60px; /* adjust to header height */
+    right: 20px;
+    width: 200px;
+    padding: 1rem;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+    background: none;
+    border: none;
+    font-size: 1.8rem;
+    cursor: pointer;
+  }
+}
+
+/* On desktop, always visible */
+@media (min-width: 769px) {
+  .menu-toggle {
+    display: none;
+  }
+}

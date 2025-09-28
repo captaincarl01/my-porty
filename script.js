@@ -8,16 +8,17 @@ yearEls.forEach(function(el){ if(el) el.textContent = new Date().getFullYear(); 
 
 
 // nav toggle (shared)
-var toggles = document.querySelectorAll('.nav-toggle');
-toggles.forEach(function(t){
-var targetId = t.getAttribute('aria-controls') || t.id.replace('navToggle','primaryNav');
-var nav = document.getElementById(targetId) || document.querySelector('.nav');
-t.addEventListener('click', function(){
-var expanded = t.getAttribute('aria-expanded') === 'true';
-t.setAttribute('aria-expanded', String(!expanded));
-if(nav) nav.classList.toggle('open');
+document.addEventListener("DOMContentLoaded", () => {
+  const menuToggle = document.querySelector(".menu-toggle");
+  const navLinks = document.querySelector(".nav-links");
+
+  if (menuToggle && navLinks) {
+    menuToggle.addEventListener("click", () => {
+      navLinks.classList.toggle("open");
+    });
+  }
 });
-});
+
 
 // simple filter on portfolio page
 var filter = document.getElementById('filter');
