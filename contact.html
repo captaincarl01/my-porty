@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Contact — RHEMATEK</title>
+    <meta name="description" content="Contact page — request a quote, say hi or schedule a call.">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="container header-row">
+            <a class="brand" href="index.html">RHEMATEK<span class="dot">.</span></a>
+            <nav id="primaryNavContact" class="nav">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="portfolio.html" class="nav-link">Portfolio</a>
+                <a href="services.html" class="nav-link">Services</a>
+                <a href="contact.html" class="nav-link active cta">Contact</a>
+            </nav>
+            <button id="navToggleContact" class="nav-toggle">☰</button>
+        </div>
+    </header>
+
+<main>
+    <section class="container section contact-page">
+        <div class="contact-grid">
+            <div>
+                <h1>Let’s work together</h1>
+                <p>Tell me about your project — I’ll reply with a plan and price estimate within 48 hours.</p>
+
+
+        <form id="contactForm" class="contact-form" action="https://formspree.io/f/mjkonkba" method="post" novalidate>
+            <label for="name">Full name</label>
+            <input id="name" name="name" type="text" placeholder="Your full name" required>
+
+
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" placeholder="you@example.com" required>
+
+
+            <label for="company">Company (optional)</label>
+            <input id="company" name="company" type="text" placeholder="Company name">
+
+
+            <label for="message">Brief</label>
+            <textarea id="message" name="message" rows="6" placeholder="Tell me about your goals, timeline and budget." required></textarea>
+
+
+        <div class="form-actions">
+        <button class="btn btn-primary" type="submit">Send message</button>
+            <span id="formStatus" aria-live="polite"></span>
+        </div>
+        </form>
+    </div>
+
+    <aside>
+        <div class="card contact-card">
+                <h3>Contact details</h3>
+                <p><strong>Email:</strong> adeyeyestephen278@gmail.com</p>
+                <p><strong>Phone:</strong> +234 815 650 5752</p>
+                <p><strong>Location:</strong> Ibadan, Nigeria</p>
+                <p><strong>Availability:</strong> Remote / Freelance</p>
+            <div class="socials">
+                <a href="https://www.linkedin.com/in/stephen-adeyeye-3b521235b" target="_blank" aria-label="LinkedIn">LinkedIn</a>
+                <a href="https://github.com/captaincarl01" target="_blank" aria-label="GitHub">GitHub</a>
+            </div>
+        </div>
+
+
+        <div class="card">
+            <h4>How I work</h4>
+                <p>Transparent process, fixed milestones, and clear communications. I provide estimates, designs and an implementation plan before the build starts.</p>
+        </div>
+    </aside>
+        </div>
+    </section>
+</main>
+
+
+<footer class="site-footer">
+    <div class="container footer-grid">
+        <div class="brand-stack">
+            <a class="brand" href="index.html">RHEMATEK<span class="dot">.</span></a>
+            <p class="muted">Web Designer — accessible & performance-minded</p>
+        </div>
+        <nav class="footer-nav" aria-label="Footer">
+            <a href="portfolio.html">Portfolio</a>
+            <a href="services.html">Services</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+        <div class="copyright">© <span id="yearContact"></span> Adeyeye Stephen</div>
+    </div>
+</footer>
+<script src="assets/script.js"></script>
+</body>
+</html>

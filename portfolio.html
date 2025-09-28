@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Portfolio — RHEMATEK</title>
+    <meta name="description" content="Portfolio — case studies of design and front-end work.">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="site-header">
+    <div class="container header-row">
+        <a class="brand" href="index.html">RHEMATEK<span class="dot">.</span></a>
+        <nav id="primaryNavPort" class="nav">
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="about.html" class="nav-link">About</a>
+            <a href="portfolio.html" class="nav-link active">Portfolio</a>
+            <a href="services.html" class="nav-link">Services</a>
+            <a href="contact.html" class="nav-link cta">Contact</a>
+        </nav>
+        <button id="navTogglePort" class="nav-toggle" aria-expanded="false" aria-controls="primaryNavPort">☰</button>
+    </div>
+</header>
+<main>
+    <section class="container section">
+        <h1 class="section-title">Selected case studies</h1>
+            <p class="section-lead">A selection of projects showing the full lifecycle from research and design to implementation and results.</p>
+
+
+        <div class="filters">
+            <label for="filter">Filter:</label>
+            <select id="filter" name="filter">
+                <option value="all">All</option>
+                <option value="web">Websites</option>
+                <option value="ecom">E-commerce</option>
+                <option value="saas">SaaS</option>
+            </select>
+        </div>
+    
+
+
+    <div class="portfolio-grid" id="portfolioGrid">
+        <!-- Project 1 -->
+            <article class="project project--web" id="project1">
+                <img src="pro2.jpg" alt="Project 1 screenshot">
+                <div class="project-body">
+                    <h3>Project One — E-commerce Redesign</h3>
+                    <p>Problem: High cart abandonment. Solution: Simplified checkout, improved trust signals, lazy-loaded images. Result: +22% conversions.</p>
+                    <div class="project-meta">Tools: Figma, React, Node</div>
+                    <a class="btn-link" href="#" aria-label="Open project one case study">Read case study</a>
+                </div>
+            </article>
+
+    
+
+
+        <!-- Project 2 -->
+            <article class="project project--saas" id="project2">
+                <img src="pro4.jpg" alt="Project 2 screenshot">
+                <div class="project-body">
+                    <h3>Project Two — Analytics Dashboard</h3>
+                    <p>Built a performant dashboard with realtime charts and accessible components for data exploration.</p>
+                    <div class="project-meta">Tools: Figma, React, D3</div>
+                    <a class="btn-link" href="#">Read case study</a>
+                </div>
+            </article>
+
+        <!-- Project 3 -->
+            <article class="project project--web" id="project3">
+                <img src="pro1.jpeg" alt="Project 3 screenshot">
+                <div class="project-body">
+                    <h3>Project Three — Marketing Website</h3>
+                    <p>Designed and developed a responsive marketing site with a focus on performance and SEO.</p>
+                    <div class="project-meta">Tools: Figma, HTML/CSS, JavaScript</div>
+                    <a class="btn-link" href="#">Read case study</a>
+                </div>
+            </article>
+
+        <!-- Project 4 
+            <article class="project project--ecom" id="project4">
+                <img src="https://via.placeholder.com/1200x700?text=Project+4" alt="Project 4 screenshot">
+                <div class="project-body">
+                    <h3>Project Four — Online Store</h3>
+                    <p>Created a scalable e-commerce platform with a custom CMS and integrated payment solutions.</p>
+                    <div class="project-meta">Tools: Figma, React, Node</div>
+                    <a class="btn-link" href="#">Read case study</a>
+                </div>
+            </article> -->
+
+        <!-- More projects can be added here -->
+        </div>
+    </section>
+</main>
+
+
+<footer class="site-footer">
+    <div class="container footer-grid">
+        <div class="brand-stack">
+            <a class="brand" href="index.html">RHEMATEK<span class="dot">.</span></a>
+            <p class="muted">Web Designer — accessible & performance-minded</p>
+        </div>
+        <nav class="footer-nav" aria-label="Footer">
+            <a href="portfolio.html">Portfolio</a>
+            <a href="services.html">Services</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+        <div class="copyright">© <span id="yearPort"></span> Adeyeye Stephen</div>
+    </div>
+</footer>
+<script src="assets/script.js"></script>
+</body>
+</html>
