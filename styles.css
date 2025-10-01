@@ -23,8 +23,6 @@ body{margin:0;font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "
 .nav-link.active{color:var(--accent);font-weight:600}
 .nav-toggle{display:none;background:none;border:0;font-size:1.2rem}
 .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
-
-
 /* Hero */
 .hero{padding:4rem 0}
 .hero-grid{display:grid;grid-template-columns:1fr 420px;gap:2.5rem;align-items:center}
@@ -114,43 +112,37 @@ body{margin:0;font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "
 .nav-toggle{display:inline-block}
 .container{padding:1rem}
 }
-/* Default hide on mobile */
-.nav-links {
-  display: flex;
-  gap: 1rem;
-  list-style: none;
-}
-
+/* Hide nav by default on mobile, show when .open is present */
 @media (max-width: 768px) {
-  .nav-links {
+  .nav {
     display: none;
     flex-direction: column;
-    background: #fff;
+    background: #fff; /* or your preferred background */
     position: absolute;
-    top: 60px; /* adjust to header height */
-    right: 20px;
-    width: 200px;
-    padding: 1rem;
-    border: 1px solid #ddd;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    top: 60px; /* adjust based on your header height */
+    right: 0;
+    left: 0;
+    z-index: 1000;
+    padding: 1rem 0;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
   }
-
-  .nav-links.open {
+  .nav.open {
     display: flex;
   }
-
-  .menu-toggle {
+  .nav-toggle {
     display: block;
-    background: none;
-    border: none;
-    font-size: 1.8rem;
-    cursor: pointer;
   }
 }
 
-/* On desktop, always visible */
+/* Show nav and hide toggle on desktop */
 @media (min-width: 769px) {
-  .menu-toggle {
+  .nav {
+    display: flex !important;
+    position: static;
+    box-shadow: none;
+    padding: 0;
+  }
+  .nav-toggle {
     display: none;
   }
 }
